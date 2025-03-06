@@ -16,6 +16,14 @@
   <img [src]="imgurl" alt="BridgeLabz Logo" (click)="onClick($event)" style="cursor: pointer;" />
 </div>
 
+<!--uc-5-->
+<div>
+  <label>Enter your name: </label>
+  <input type="text" [(ngModel)]="userName" placeholder="Type your name">
+</div>
+
+<h2>Hello from BridgeLabz, {{ userName }}</h2>
+
 
 </body>
 </html>

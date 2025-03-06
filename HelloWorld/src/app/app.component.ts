@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
-//import { RouterOutlet } from '@angular/router';
+// import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms'; // Import FormsModule
 
 @Component({
   selector: 'app-root',
   // imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  // uc-5
+  standalone: true,
+  imports:[FormsModule],
 })
 export class AppComponent {
   title = 'HelloWorld';
@@ -25,6 +29,11 @@ export class AppComponent {
     console.log("Image clicked", $event);
     window.open(this.url, "_blank"); // Opens the link in a new tab
   }
+ 
+  // uc-5 
+  userName: string = '';
+  
+
 
 }
 
