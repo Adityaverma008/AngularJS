@@ -32,6 +32,24 @@ export class AppComponent {
  
   // uc-5 
   userName: string = '';
+
+//  uc-6 
+// userName: string = '';
+  errorMessage: string = '';
+  validName: boolean = false;
+
+  greetUser(): void {
+    this.errorMessage = '';  // Clear previous error message
+    this.validName = false;
+
+    // Check if the name has an initial cap and is at least 3 characters long
+    const nameRegex = /^[A-Z][a-zA-Z]{2,}$/;  // Ensures initial letter is capital, and name is at least 3 characters long
+    if (nameRegex.test(this.userName)) {
+      this.validName = true;
+    } else {
+      this.errorMessage = 'Please enter a valid name with an initial capital letter and at least 3 letters.';
+    }
+  }
   
 
 

@@ -22,7 +22,17 @@
   <input type="text" [(ngModel)]="userName" placeholder="Type your name">
 </div>
 
-<h2>Hello from BridgeLabz, {{ userName }}</h2>
+<!--uc-6-->
+<div>
+  <h2>Enter your Name</h2>
+  <input type="text" [(ngModel)]="userName" placeholder="Enter Name">
+  <button (click)="greetUser()">Submit</button>
+
+  <p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
+  <p *ngIf="validName && !errorMessage">Hello from BridgeLabz, {{ userName }}!</p>
+</div>
+
+
 
 
 </body>
