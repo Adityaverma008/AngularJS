@@ -11,11 +11,11 @@
    <!--uc-2-->
   <h1>{{ title }}</h1>
 
-  <!--uc-3-->
-  <div>
-    <img [src] = "imgurl" 
-    alt = "BridgeLablogo" />
-  </div>
+  <!-- UC-3: Click event to open website and uc-4 -->
+<div>
+  <img [src]="imgurl" alt="BridgeLabz Logo" (click)="onClick($event)" style="cursor: pointer;" />
+</div>
+
 
 </body>
 </html>
